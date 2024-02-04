@@ -1,5 +1,9 @@
 # Minimax Algorithm with Alpha-Beta Pruning
 
+## Online Deploy
+
+You can try the Minimax Alpha-Beta online by visiting the [Online Test](https://tic-tac-toe.rev.earth) page.
+
 ## Getting Started
 
 First, run the development server:
