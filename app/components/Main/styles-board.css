@@ -1,0 +1,97 @@
+.board {
+  /* Draw winning line */
+  position: relative;
+}
+
+.board::after {
+  content: "";
+  position: absolute;
+  background-color: #2ab7ca;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+}
+
+/* Horizontal Lines */
+
+.board.h::after {
+  width: 0%;
+  height: 5px;
+  left: 5%;
+  transform: translateY(-50%);
+}
+
+.board.h.full::after {
+  width: 90%;
+}
+
+.board.h0::after {
+  top: calc(100% / 6);
+}
+
+.board.h1::after {
+  top: 50%;
+}
+
+.board.h2::after {
+  top: calc(5 * 100% / 6);
+}
+
+/* Vertical Lines */
+
+.board.v::after {
+  height: 0%;
+  width: 5px;
+  top: 5%;
+  transform: translateX(-50%);
+}
+
+.board.v.full::after {
+  height: 90%;
+}
+
+.board.v0::after {
+  left: calc(100% / 6);
+}
+
+.board.v1::after {
+  left: 50%;
+}
+
+.board.v2::after {
+  left: calc(5 * 100% / 6);
+}
+
+/* Diagonal Lines */
+
+.board.d0::after {
+  height: 0%;
+  width: 5px;
+  left: 6%;
+  top: 7%;
+  transform: rotateZ(-45deg);
+  transform-origin: 50% 0;
+  transition: height 0.7s;
+  -webkit-transition: height 0.7s;
+  -moz-transition: height 0.7s;
+  -o-transition: height 0.7s;
+}
+
+.board.d1::after {
+  height: 0%;
+  width: 5px;
+  right: 6%;
+  top: 7%;
+  transform: rotateZ(45deg);
+  transform-origin: 50% 0;
+  transition: height 0.7s;
+  -webkit-transition: height 0.7s;
+  -moz-transition: height 0.7s;
+  -o-transition: height 0.7s;
+}
+
+.board.d0.full::after,
+.board.d1.full::after {
+  height: 120%;
+}
